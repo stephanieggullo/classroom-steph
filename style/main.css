@@ -5,5 +5,16 @@
 }
 
 body {
-    background-color: pink;
+    background-color: rgb(228, 171, 240);
+}
+
+.box-palette {
+    background-color: rgba(248, 197, 248, 0.562);
+    padding: 10px;
+    margin: 5px;
+}
+
+.color-box {
+    width: 20px;
+    height: 20px;
 }
