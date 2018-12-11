@@ -14,21 +14,21 @@ const funtionInit = () => {
         })
         .then(data => {
             const allPalettes = data.palettes;
-            let ulContent = '';
 
             for (let palette of allPalettes) {
-
-                const listPalettes = `<li class="box-palette"> ${palette.name}</li>`;
-                ulContent += listPalettes;
-                ulEl.innerHTML = ulContent;
+                let myList = document.createElement("li");
+                myList.classList.add("box-palette");
+                myList.innerHTML = palette.name;
+                ulEl.appendChild(myList);
 
                 const palettesColors = palette.colors;
                 let liColor = '';
 
                 for (let colors of palettesColors) {
-                    const listColors = `<div class="color-box" style="background-color:${colors}"</div>`;
+                    const listColors = `<div class="color-box" style="background-color:#${colors}"</div>`;
                     liColor += listColors;
                     console.log(liColor);
+                    myList.innerHTML += liColor;
                 }
             }
         })
